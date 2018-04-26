@@ -1,0 +1,28 @@
+
+camel:
+  springboot:
+    # The Camel context name
+    name: CamelRestJpa
+
+  component:
+    servlet:
+      mapping:
+        contextPath: /*
+
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    #hibernate:
+      #ddl-auto: create-drop
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/isedb
+    username: postgres
+    password: india123
+    driverClassName: org.postgresql.Driver
+
+# The application configuration properties
+example:
+  generateOrderPeriod: 10s
+  processOrderPeriod: 30s
